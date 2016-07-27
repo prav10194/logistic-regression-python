@@ -68,7 +68,7 @@ class LogisticRegression:
             coeff[0]=coeff[0]+ float(float(alpha)*(float(lastCol[k])-pred)*float(pred)*float((1-pred))*float(1))
             i=1
             for value in row:
-                coeff[i] = float(float(alpha)*(float(lastCol[k])-pred)*float(pred)*float((1-pred))*float(value))
+                coeff[i] =coeff[i]+ float(float(alpha)*(float(lastCol[k])-pred)*float(pred)*float((1-pred))*float(value))
                 i=i+1
             k=k+1
         print("Coeffecient Matrix: "+str(coeff))
